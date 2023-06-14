@@ -77,7 +77,7 @@ app.get('/signed-url', (req, res) => {
   const expirationTime = Math.floor(Date.now() / 1000) + expiresInSeconds;
 
   const params = {
-    Bucket: 'muhammadaflah',
+    Bucket: process.env.BUCKET_NAME,
     Key: imageKey,
     Expires: expiresInSeconds,
   };
